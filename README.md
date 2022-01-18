@@ -7,13 +7,16 @@ Documentation for setup and components is provided separately.
 Directory Tree:
 
 Install
+
   PI_Application_Software
 
 Methods
+
   Grids
   Standard_Methods
 
 OutputFiles
+
   ExampleUser1
   ExampleUser2
 

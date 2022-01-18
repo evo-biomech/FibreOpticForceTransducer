@@ -1,0 +1,21 @@
+0:
+  Control: Stage movement
+  Duration: 1.0
+  Stage: Z
+  Type: Move stage
+  Value: 1.0
+  Velocity: 1.0
+1:
+  Control: Stage movement
+  Duration: 2.0
+  Stage: na
+  Type: Hold
+  Value: na
+  Velocity: na
+2:
+  Control: Stage movement
+  Duration: 1.0
+  Stage: Z
+  Type: Move stage
+  Value: -1.0
+  Velocity: 1.0

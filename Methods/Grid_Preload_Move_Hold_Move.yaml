@@ -1,0 +1,132 @@
+0:
+  Pos X: 0.0
+  Pos Y: 0.0
+  Type: Go to
+  Z up: 10.0
+1:
+  Control: Stage movement
+  Duration: 20.0
+  Stage: Z
+  Type: Preload
+  Value: 1.0
+  Velocity: 0.2
+2:
+  Control: Stage movement
+  Duration: 10.0
+  Stage: Z
+  Type: Move stage
+  Value: -2.0
+  Velocity: 0.2
+3:
+  Control: Stage movement
+  Duration: 5.0
+  Stage: na
+  Type: Hold
+  Value: na
+  Velocity: na
+4:
+  Control: Stage movement
+  Duration: 1.0
+  Stage: Z
+  Type: Move stage
+  Value: 2.0
+  Velocity: 2.0
+5:
+  Pos X: 0.0
+  Pos Y: 10.0
+  Type: Go to
+  Z up: 10.0
+6:
+  Control: Stage movement
+  Duration: 20.0
+  Stage: Z
+  Type: Preload
+  Value: 1.0
+  Velocity: 0.2
+7:
+  Control: Stage movement
+  Duration: 5.0
+  Stage: Z
+  Type: Move stage
+  Value: -2.0
+  Velocity: 0.4
+8:
+  Control: Stage movement
+  Duration: 5.0
+  Stage: na
+  Type: Hold
+  Value: na
+  Velocity: na
+9:
+  Control: Stage movement
+  Duration: 1.0
+  Stage: Z
+  Type: Move stage
+  Value: 2.0
+  Velocity: 2.0
+10:
+  Pos X: 10.0
+  Pos Y: 0.0
+  Type: Go to
+  Z up: 10.0
+11:
+  Control: Stage movement
+  Duration: 20.0
+  Stage: Z
+  Type: Preload
+  Value: 1.0
+  Velocity: 0.2
+12:
+  Control: Stage movement
+  Duration: 2.0
+  Stage: Z
+  Type: Move stage
+  Value: -2.0
+  Velocity: 1.0
+13:
+  Control: Stage movement
+  Duration: 5.0
+  Stage: na
+  Type: Hold
+  Value: na
+  Velocity: na
+14:
+  Control: Stage movement
+  Duration: 1.0
+  Stage: Z
+  Type: Move stage
+  Value: 2.0
+  Velocity: 2.0
+15:
+  Pos X: 10.0
+  Pos Y: 10.0
+  Type: Go to
+  Z up: 10.0
+16:
+  Control: Stage movement
+  Duration: 20.0
+  Stage: Z
+  Type: Preload
+  Value: 1.0
+  Velocity: 0.2
+17:
+  Control: Stage movement
+  Duration: 1.0
+  Stage: Z
+  Type: Move stage
+  Value: -2.0
+  Velocity: 2.0
+18:
+  Control: Stage movement
+  Duration: 5.0
+  Stage: na
+  Type: Hold
+  Value: na
+  Velocity: na
+19:
+  Control: Stage movement
+  Duration: 1.0
+  Stage: Z
+  Type: Move stage
+  Value: 2.0
+  Velocity: 2.0

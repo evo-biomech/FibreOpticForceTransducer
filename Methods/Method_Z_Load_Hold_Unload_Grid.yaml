@@ -1,0 +1,88 @@
+0:
+  Pos X: 0
+  Pos Y: 0
+  Type: Go to
+1:
+  Displacement: 5
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 1
+2:
+  Displacement: na
+  Duration: 5
+  Stage: na
+  Type: Hold
+  Velocity: na
+3:
+  Displacement: -5
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 2
+4:
+  Pos X: 1
+  Pos Y: 1
+  Type: Go to
+5:
+  Displacement: 4
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 3
+6:
+  Displacement: na
+  Duration: 5
+  Stage: na
+  Type: Hold
+  Velocity: na
+7:
+  Displacement: -4
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 4
+8:
+  Pos X: 2
+  Pos Y: 2
+  Type: Go to
+9:
+  Displacement: 3
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 5
+10:
+  Displacement: na
+  Duration: 5
+  Stage: na
+  Type: Hold
+  Velocity: na
+11:
+  Displacement: -3
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 6
+12:
+  Pos X: 1
+  Pos Y: 0
+  Type: Go to
+13:
+  Displacement: 7
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 7
+14:
+  Displacement: na
+  Duration: 5
+  Stage: na
+  Type: Hold
+  Velocity: na
+15:
+  Displacement: -7
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 8

@@ -1,0 +1,20 @@
+0:
+  Method type: Displacement control
+1:
+  Duration: 5.0
+  Stage: Z
+  Type: Preload
+  Value: 5.0
+  Velocity: 1.0
+2:
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Value: 1.0
+  Velocity: 1.0
+3:
+  Duration: 10.0
+  Stage: na
+  Type: Hold
+  Value: na
+  Velocity: na

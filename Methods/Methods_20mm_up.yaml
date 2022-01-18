@@ -1,0 +1,18 @@
+0:
+  Displacement: -20.0
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 2.0
+1:
+  Displacement: na
+  Duration: 1.0
+  Stage: na
+  Type: Hold
+  Velocity: na
+2:
+  Displacement: 20.0
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 5.0

@@ -1,0 +1,7 @@
+0:
+  Control: Stage movement
+  Duration: 5.0
+  Stage: Z
+  Type: Move stage
+  Value: 50.0
+  Velocity: 2.0

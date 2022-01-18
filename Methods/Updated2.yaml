@@ -1,0 +1,21 @@
+0:
+  Control: Force control
+  Duration: 5.0
+  Stage: Z
+  Type: Move stage
+  Value: 1.0
+  Velocity: 0.2
+1:
+  Control: Force control
+  Duration: 6.0
+  Stage: na
+  Type: Hold
+  Value: na
+  Velocity: na
+2:
+  Control: Force control
+  Duration: 2.0
+  Stage: Z
+  Type: Move stage
+  Value: -1.0
+  Velocity: 0.5

@@ -1,0 +1,12 @@
+0:
+  Displacement: -1.0
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 0.2
+1:
+  Displacement: 1.0
+  Duration: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 1.0

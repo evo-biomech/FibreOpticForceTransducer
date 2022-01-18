@@ -1,0 +1,21 @@
+0:
+  Displacement: na
+  Duration: 5.0
+  Force: 0.0008
+  Stage: Z
+  Type: Preload
+  Velocity: 0.2
+1:
+  Displacement: 10.0
+  Duration: na
+  Force: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 5.0
+2:
+  Displacement: -10.0
+  Duration: na
+  Force: na
+  Stage: Z
+  Type: Move stage
+  Velocity: 5.0

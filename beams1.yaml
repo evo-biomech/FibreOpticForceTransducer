@@ -1,0 +1,18 @@
+temperature,33.3
+samplerate,2.54 samples/s
+average over x measurements,4096
+lightintensity,68
+beam,Steel0.4x10
+forcedistance,14.0
+measuredistance,27.0
+resulting conversionfact,1617.703536421131
+taredist,597.6812
+
+deflection in um,mass in g,Young's modulus
+0.3181,0.0,0.0
+8.2154,1.0,40804.59791976044
+17.8292,2.0,37604.16549817153
+47.8535,5.0,35026.287915199515
+101.146,10.0,33142.7929675914
+209.9276,20.0,31937.30540910294
+495.7728,50.0,33808.439445447584

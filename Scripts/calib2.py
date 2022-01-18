@@ -31,12 +31,12 @@ class CalibWindow(ttk.Frame):
     def __init__(self, parent):
         ttk.Frame.__init__(self, parent)
         
-        v = tk.IntVar() # used for proper functioning of the radiobuttons     
+        v = tk.IntVar() # used for proper functioning of the radiobuttons
         self.chooseframe = dFrame(self, text='choose beam')
         self.choosebox = ttk.Combobox(self.chooseframe)
         self.choosebox['values']=list(sens.beamdict)
-        self.forcelengthlbl = ttk.Label(self.chooseframe,text='distance to force application (mm): ')
-        self.measurelengthlbl = ttk.Label(self.chooseframe,text='distance to measurement point (mm)')
+        self.forcelengthlbl = ttk.Label(self.chooseframe,text='distance to forceapplication: ')
+        self.measurelengthlbl = ttk.Label(self.chooseframe,text='distance to measurement point')
         self.forcelengthentry = ttk.Entry(self.chooseframe)
         self.measurelengthentry = ttk.Entry(self.chooseframe)
         self.setchoicebtn = ttk.Button(self.chooseframe,text='apply',command=self.calculate)
@@ -84,7 +84,6 @@ class CalibWindow(ttk.Frame):
     
     def tare(self):
         """passes the tare distance to forceconversion"""
-        print(self.taredistlbl.cget('text'))
         self.tared = float(self.taredistlbl.cget('text'))
         FC.tare = self.tared
         self.updatetare=False
@@ -98,32 +97,17 @@ class CalibWindow(ttk.Frame):
         """ constantly updates the distance value"""
         def run():
             print("chooseframe thread started")
-            sens.sens.write(b'/T \r\n') 
-            ans = sens.sens.readline()
-            sens.sens.write(b'/getConfig\r\n')
-            ans = sens.sens.readline()
-            print('configdict:', ans)
-            # time_0 = time.time()
             while self.updatetare:
-                print("Hello")
-                sens.sens.write(b'/T \r\n')                
+                sens.sens.write(b'/T \r\n')
                 self.target = con.make_dict(sens.sens.readline(),sens.channel)
-                print("target:", self.target)
-                self.distance = self.target['distn'].astype(float)
-                print("distance:", self.distance)
-                # print(time.time()-time_0)
-                # time_0 = time.time()
-                # self.distance = sens.emptystreamdict['distn2'][-1]
+                self.distance = self.target['distn'] 
+                #self.dstance = sens.emptystreamdict['distn2'][-1]
                 
                 self.taredistlbl.configure(text=self.distance)
                 # print(self.distance)
             print("chooseframe thread stopped")
         self.thread = Thread(target = run) 
         self.thread.start() 
-        print("thread started")
-        #sens.sens.write(b'/getConfig\r\n')
-        #ans = sens.sens.readline
-        #print('configdict:', ans)
 
     def join_threads(self):
         """waits until all running threads are finished"""
@@ -149,7 +133,6 @@ class CalibWindow(ttk.Frame):
         time.sleep(0.5)
         self.updatetare = True
         self.update_distlbl() # start thread in chooseframe
-        print(self.update_distlbl())
         self.calibframe.disable()
         self.chooseframe.enable()
       
@@ -191,11 +174,11 @@ class CalibWindow(ttk.Frame):
         FC.forcelength = float(self.forcelengthentry.get())
         FC.measurelength = float(self.measurelengthentry.get())
         self.beam = self.choosebox.get()
-        print("beam selected for conversion factor: ", self.beam)
         self.beamfact = sens.beamdict[self.beam]
         self.testfact = FC.calc_testfact()
         sens.conversionfactor = self.beamfact/self.testfact
         sens.current_beam = self.beam
+  
 
 class WeigthCalib (ttk.Frame):
     def __init__(self, parent):
@@ -212,7 +195,7 @@ class WeigthCalib (ttk.Frame):
         self.paramsframe = ttk.Labelframe(self, text='parameter')
         self.paramsframe.grid(row=0,column=0)
 
-        self.params = ['Material','distance to force application (mm)','width (mm)', 'thickness (mm)', 'distance to measuring point (mm)']
+        self.params = ['Material','distance to force application','width', 'thickness', 'distance to measuring point']
         self.labels = []
         self.entries = []
         for i in range(len(self.params)):
@@ -268,7 +251,7 @@ class WeigthCalib (ttk.Frame):
         self.calcframe.grid(row=1,column=0,columnspan=2)
 
         self.calcbtn = ttk.Button(self.calcframe, text="calculate", command=self.calculate)
-        self.Emodmean = ttk.Label(self.calcframe, text="mean Young's modulus (MPa): ")
+        self.Emodmean = ttk.Label(self.calcframe, text="mean Young's modulus: ")
         #self.range = ttk.Label(self.calcframe, text='range: ')
         # self.absDev = ttk.Label(self.calcframe, text='absolute Derivation: ')
         self.stDev = ttk.Label(self.calcframe, text='standard Derivation: ')
@@ -409,9 +392,6 @@ class WeigthCalib (ttk.Frame):
             while self.running:
                 sens.sens.write(b'/T \r\n')
                 self.target = con.make_dict(sens.sens.readline(),sens.channel)
-                print("readline: ", sens.sens.readline())
-                print("channel: ", sens.channel)
-                print("target: ", self.target)
                 self.distance = self.target['distn'] 
                 self.deflection = round((self.distance-FC.tare),4)
                 #self.dstance = sens.emptystreamdict['distn2'][-1]
